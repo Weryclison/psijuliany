@@ -1,0 +1,88 @@
+.titulo {
+  text-align: center;
+  margin-bottom: 72px;
+}
+.perguntas-conteudo {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.perguntas {
+  margin-bottom: 120px;
+  margin-top: 80px;
+}
+.pergunta {
+  border-bottom: 1px solid var(--roxo-1);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.pergunta dt {
+  padding: 20px 0px;
+  padding-right: 30px;
+  position: relative;
+  font-weight: 500;
+}
+.perguntas-imagem img {
+  width: 100%;
+  position: sticky;
+  top: 100px;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes girar-reverso {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+dt::before {
+  content: "";
+  background: url(../img/setinha-baixo.svg);
+  display: block;
+  width: 16px;
+  height: 9px;
+  position: absolute;
+  right: 0;
+  top: 24px;
+  transition: transform 0.3s ease;
+}
+
+dt.ativo::before {
+  animation: girar 0.5s forwards;
+}
+dt:not(.ativo)::before {
+  animation: girar-reverso 0.5s forwards;
+}
+
+.pergunta dd {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.pergunta dd.ativo {
+  max-height: 2000px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+  .perguntas {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+  }
+  .perguntas-imagem {
+    display: flex;
+    justify-content: center;
+  }
+  .titulo {
+    margin-bottom: 40px;
+  }
+}

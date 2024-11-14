@@ -1,0 +1,21 @@
+@import url(./css/global.css);
+@import url(./css/tipografiaecor.css);
+@import url(./css/menu-mobile.css);
+@import url(./css/reutilizaveis.css);
+
+@import url(./css/inicio.css);
+@import url(./css/quebra.css);
+@import url(./css/sobre.css);
+@import url(./css/funcionamento.css);
+@import url(./css/contato.css);
+@import url(./css/footer.css);
+@import url(./css/animar.css);
+
+@import url(./css/faq.css);
+
+@font-face {
+  font-family: "BwSeido";
+  src: url("fontes/BwSeidoRound.otf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

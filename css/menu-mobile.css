@@ -1,0 +1,158 @@
+#header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: 2px solid var(--roxo-1);
+}
+.flex-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#menu {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+#menu a {
+  display: block;
+  transition: color 0.2s;
+}
+#menu li:hover {
+  color: var(--roxo);
+}
+
+#btn-mobile {
+  display: none;
+}
+.menu-active {
+  overflow: hidden;
+}
+
+.menu-active::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.contato-header {
+  display: none;
+}
+.rede {
+  display: none;
+}
+.redes-sociais {
+  display: none;
+}
+#nav.active .redes-sociais {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+
+  margin-top: 50px;
+}
+#nav.active .rede {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .flex-menu .logo {
+    display: none;
+  }
+  #btn-mobile {
+    display: block;
+  }
+  .contato-header {
+    display: block;
+  }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    height: 0px;
+    transition: 1s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+    background-color: var(--branco);
+  }
+  #menu li {
+    text-align: right;
+    margin-bottom: 60px;
+    margin-right: 60px;
+    /* color: var(--azul-escuro); */
+  }
+  #menu li:first-child {
+    margin-top: 140px;
+  }
+
+  #nav.active #menu {
+    height: 100vh;
+    visibility: visible;
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 4px 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 10px;
+  }
+  #hamburguer {
+    border-top: 3px solid var(--roxo-1);
+  }
+  #hamburguer::after,
+  #hamburguer::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: var(--roxo-1);
+    display: block;
+    transition: 0.3s;
+    margin-top: 4px;
+    position: relative;
+  }
+  #nav.active #hamburguer {
+    display: block;
+    border-top: 4px solid var(--roxo-1);
+    width: 30px;
+    z-index: 9999;
+  }
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+@media (max-width: 460px) {
+  #logo {
+    max-width: 40vw;
+    left: 50%;
+    transform: translateX(-0%) !important;
+  }
+}
+@media (max-width: 310px) {
+  #logo {
+    display: none;
+  }
+}

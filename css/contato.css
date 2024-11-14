@@ -1,0 +1,19 @@
+.contato-bg {
+  background-color: var(--roxo);
+}
+.contato {
+  text-align: center;
+  padding-top: 80px;
+}
+.contato h2 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.contato p {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.contato .botao {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}

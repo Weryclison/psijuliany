@@ -1,0 +1,64 @@
+.font-1-a {
+  font-family: "BwSeido";
+  font-weight: 400;
+  font-size: 6rem;
+  letter-spacing: -2%;
+  color: #363636;
+}
+.font-1-b {
+  font-family: "BwSeido";
+  font-weight: 400;
+  font-size: 4rem;
+  letter-spacing: -2%;
+  color: #363636;
+}
+.font-1-c {
+  font-family: "BwSeido";
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: -2%;
+  color: #363636;
+}
+
+.font-2-a {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #363636;
+  line-height: 180%;
+}
+
+:root {
+  --roxo-1: #2c1b56;
+  --roxo: #56478d;
+  --preto: #363636;
+  --branco: #f5f5f5;
+}
+@media (max-width: 1000px) {
+  .font-1-a {
+    font-size: 2.5rem;
+  }
+  .font-1-b {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 450px) {
+  .font-1-b {
+    font-size: 1.8rem;
+  }
+  .font-1-c {
+    font-size: 2rem;
+  }
+}
+.roxo-1 {
+  color: var(--roxo-1);
+}
+.roxo {
+  color: var(--roxo);
+}
+.preto {
+  color: var(--preto);
+}
+.branco {
+  color: var(--branco);
+}

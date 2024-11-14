@@ -1,0 +1,35 @@
+.funcionamento h2 {
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 80px;
+}
+.funcionamento .caixas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  text-align: center;
+}
+.caixas .caixa {
+  padding: 40px 28px;
+  border: 2px solid var(--roxo-1);
+  border-radius: 80px;
+}
+.caixa h3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.funcionamento .botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1000px) {
+  .funcionamento .caixas {
+    grid-template-columns: 1fr;
+  }
+}
